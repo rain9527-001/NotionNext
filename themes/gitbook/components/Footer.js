@@ -1,8 +1,9 @@
 import { BeiAnGongAn } from '@/components/BeiAnGongAn'
 import { siteConfig } from '@/lib/config'
 import SocialButton from './SocialButton'
+
 /**
- * 站点也叫
+ * 站点页脚
  * @param {*} param0
  * @returns
  */
@@ -17,17 +18,9 @@ const Footer = ({ siteInfo }) => {
     <footer className='z-20 border p-2 rounded-lg bg:white dark:border-black dark:bg-hexo-black-gray justify-center text-center w-full text-sm relative'>
       <SocialButton />
 
-      <div className='flex justify-center'>
-        <div>
-          <i className='mx-1 animate-pulse fas fa-heart' />{' '}
-          <a
-            href={siteConfig('LINK')}
-            className='underline font-bold text-gray-500 dark:text-gray-300 '>
-            {siteConfig('AUTHOR')}
-          </a>
-          .<br />
-        </div>
-        © {`${copyrightDate}`}
+      {/* 极简自定义版权信息，去除了爱心和多余的链接 */}
+      <div className='flex justify-center py-1 text-gray-500 dark:text-gray-400'>
+        <span>雨水科技生活 © {`${copyrightDate}`}</span>
       </div>
 
       {siteConfig('BEI_AN') && (
@@ -49,14 +42,7 @@ const Footer = ({ siteInfo }) => {
         <i className='fas fa-users' />{' '}
         <span className='px-1 busuanzi_value_site_uv'> </span>{' '}
       </span>
-      <div className='text-xs font-serif'>
-        Powered By{' '}
-        <a
-          href='https://github.com/tangly1024/NotionNext'
-          className='underline text-gray-500 dark:text-gray-300'>
-          NotionNext {siteConfig('VERSION')}
-        </a>
-      </div>
+
       {/* SEO title */}
       <h1 className='pt-1 hidden'>{siteConfig('TITLE')}</h1>
     </footer>
