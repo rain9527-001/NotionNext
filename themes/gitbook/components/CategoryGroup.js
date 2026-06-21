@@ -4,7 +4,6 @@ const CategoryGroup = ({ currentCategory, categoryOptions }) => {
   if (!categoryOptions) {
     return <></>
   }
-  
 
   // 中文数字转阿拉伯数字的字典，用来精准控制排序
   const chineseNumMap = {
