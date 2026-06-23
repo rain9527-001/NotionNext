@@ -4,6 +4,7 @@ module.exports = {
     es2021: true,
     node: true
   },
+  
   extends: [
     'plugin:react/jsx-runtime',
     'plugin:react/recommended',
