@@ -58,6 +58,7 @@ class MyDocument extends Document {
     return (
       <Html lang={BLOG.LANG}>
         <Head>
+          <meta name="referrer" content="no-referrer" />
           {BLOG.FONT_AWESOME && (
             <>
               <link
