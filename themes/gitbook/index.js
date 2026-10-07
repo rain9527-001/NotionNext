@@ -192,7 +192,7 @@ const LayoutBase = props => {
           {fullWidth ? null : (
             <div
               className={
-                'w-72 hidden 2xl:block dark:border-transparent flex-shrink-0 relative z-10 '
+                'w-72 block dark:border-transparent flex-shrink-0 relative z-10 '
               }>
               <div className='py-14 sticky top-0'>
                 <ArticleInfo post={props?.post ? props?.post : props.notice} />
